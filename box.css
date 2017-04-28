@@ -1,0 +1,95 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	box-sizing:border-box;
+	border: 0;
+}
+
+button:before, button:after {
+	box-sizing: inherit;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* btn1 */
+
+.btn1 {
+	width: 150px;
+	height: 70px;
+	font-size: 25px;
+	color: #AB1994;
+	background: white;
+	//border: 2px solid #AB1994;
+	position: relative;
+	top: 100px;
+	left: 100px;
+	transition: color .25s;
+}
+
+.btn1:before, .btn1:after {
+	border: 2px solid transparent;
+	width:0;
+	height:0;
+}
+
+.btn1:before {
+	top:0;
+	left:0;
+}
+
+.btn1:after {
+	bottom:0;
+	right:0;
+}
+
+.btn1:hover:before {
+	width: 100%;
+	height: 100%; 
+}
+
+.btn1:hover:before {
+	transition: width .5s ease-out, height .5s .5s ease-out;
+	border-top-color: #35B62C;
+	border-right-color: #35B62C;
+}
+/*
+.btn1:hover:after {
+	transition: width .5s 1s ease, height .5s 1.5s ease;
+	border-top-color: #35B62C;
+	border-right-color: #35B62C;
+}*/
+
+/* btn2 */
+
+.btn2 {
+	width: 150px;
+	height: 70px;
+	font-size: 25px;
+	position: absolute;
+	top: 100px;
+	left: 400px;
+	border: 1px solid #AB1994;
+	background: white;
+	color: #AB1994;
+}
+
+/*// KEYFRAMES //*/
+
+@keyframes btn1_before {
+	0% {
+		width: 0; height: 0;
+		border: 1px solid #AB1994;
+	}
+	50% {
+		width: 100%; height: 0;
+	}
+	100% {
+		width: 100%; height:100%;
+		border: 1px solid #35B62C;
+	}
+}
