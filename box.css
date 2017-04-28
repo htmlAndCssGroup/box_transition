@@ -6,6 +6,7 @@
 button {
 	box-sizing:border-box;
 	border: 0;
+	box-shadow: inset 0px 0px 0px 2px #AB1994;
 }
 
 button:before, button:after {
@@ -28,7 +29,6 @@ button:before, button:after {
 	position: relative;
 	top: 100px;
 	left: 100px;
-	transition: color .25s;
 }
 
 .btn1:before, .btn1:after {
@@ -43,26 +43,32 @@ button:before, button:after {
 }
 
 .btn1:after {
+	border-color: none;
 	bottom:0;
 	right:0;
 }
 
-.btn1:hover:before {
+.btn1:hover {
+	color: #35B62C;
+	transition: color .5s ease-in-out;
+}
+
+.btn1:hover:before, .btn1:hover:after {
 	width: 100%;
 	height: 100%; 
 }
 
 .btn1:hover:before {
-	transition: width .5s ease-out, height .5s .5s ease-out;
+	transition: width .25s ease-out, height .25s .25s ease-out;
 	border-top-color: #35B62C;
 	border-right-color: #35B62C;
 }
-/*
+
 .btn1:hover:after {
-	transition: width .5s 1s ease, height .5s 1.5s ease;
-	border-top-color: #35B62C;
-	border-right-color: #35B62C;
-}*/
+	transition: border-color 0s .5s ease-out, width .25s .5s ease-out, height .25s .75s ease-out;
+	border-bottom-color: #35B62C;
+	border-left-color: #35B62C;
+}
 
 /* btn2 */
 
