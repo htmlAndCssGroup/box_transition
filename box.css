@@ -79,23 +79,42 @@ button:before, button:after {
 	position: absolute;
 	top: 100px;
 	left: 400px;
-	border: 1px solid #AB1994;
 	background: white;
 	color: #AB1994;
 }
 
-/*// KEYFRAMES //*/
-
-@keyframes btn1_before {
-	0% {
-		width: 0; height: 0;
-		border: 1px solid #AB1994;
-	}
-	50% {
-		width: 100%; height: 0;
-	}
-	100% {
-		width: 100%; height:100%;
-		border: 1px solid #35B62C;
-	}
+.btn2:before, .btn2:after {
+	border: 2px solid transparent;
+	position: absolute;
+	width:0;
+	height:0;
 }
+
+.btn2:hover {
+	color: gold;
+	transition: color .2s ease-out;
+}
+
+.btn2:before, .btn2:after {
+	top:0;
+	left:0;
+}
+
+.btn2:hover:before, .btn2:hover:after {
+	width:100%;
+	height:100%;
+}
+
+.btn2:hover:before {
+	transition: width .25s ease-out, height .25s .25s ease-out;
+	border-top-color: gold;
+	border-right-color: gold;
+}
+
+.btn2:hover:after {
+	transition: height .25s ease-out, width .25s .25s ease-out;
+	border-left-color: gold;
+	border-bottom-color: gold;
+}
+
+/*// KEYFRAMES //*/
